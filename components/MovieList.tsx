@@ -9,12 +9,10 @@ type movie = {
 
 const MovieList = (props: movie) => {
   return (
-    <div className="w-1/3 text-center">
-      <div className="text-center">
-        <h2 className="text-xl">{props.Title}</h2>
-        <img className="h-80 block m-auto" src={props.Poster} alt="" />
-        <p>{props.Year}年公開</p>
-      </div>
+    <div className="w-full text-center mb-4 md:w-1/2 lg:w-1/3">
+      <h2 className="text-xl mb-2">{props.Title}</h2>
+      <img className="h-80 block m-auto" src={props.Poster} alt="" />
+      <p className="mt-2">{props.Year}年公開</p>
     </div>
   );
 };

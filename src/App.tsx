@@ -43,10 +43,10 @@ export const App = () => {
         映画検索アプリ
       </h1>
       <div className="bg-gray-600 min-h-screen">
-        <div className="w-4/5 mx-auto">
-          <div className="w-3/5 mx-auto py-5">
+        <div className="w-3/5 mx-auto mt:w-4/5">
+          <div className="mx-auto py-5 justify-between md:flex">
             <input
-              className="bg-gray-200 mr-5 w-2/4 pl-1"
+              className="bg-gray-200 pl-1 w-full md:w-9/12 lg:w-7/12"
               type="text"
               name=""
               id=""
@@ -55,12 +55,14 @@ export const App = () => {
               value={searchText}
             />
             <button
-              className="bg-red-900 text-white font-bold mx-12 py-1 px-16 rounded"
+              className="bg-red-900 text-white font-bold w-full mt-4 py-1 rounded md:w-3/12 md:mt-0"
               onClick={data}
             >
               検索
             </button>
           </div>
+        </div>
+        <div className="w-4/5 mx-auto">
           <div className="flex flex-wrap justify-between">
             {movies.map((movie) => {
               return (
